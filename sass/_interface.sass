@@ -1,0 +1,120 @@
+// interface
+*
+	margin: 0
+	padding: 0
+
+	box-sizing: border-box
+
+body
+	color: $black
+	font-size: 17px
+
+	+MontserratRegular
+
+// link
+a
+	color: $mainColor
+	text-decoration: none
+	+InterRegular
+	+transition
+
+	&:hover
+		color: $activeMainColor
+
+// title
+h1, h2, h3, h4, h5, h6
+	line-height: 1.2em
+
+// p
+p
+	line-height: 1.3em
+
+// container
+
+.container
+	margin-left: auto
+	margin-right: 50px
+
+	width: calc( 100% - 225px )
+
+// btn
+.btn
+	text-align: center
+	cursor: pointer
+
+	display: flex
+	justify-content: center
+	align-items: center
+
+	padding: 15px 25px
+
+	font-size: 17px
+
+	border: none
+	background-color: $lightMainColor
+	color: $mainColor
+
+	border-radius: 100px
+
+	+InterRegular
+	+transition
+
+	&.light
+		background-color: #7F82B9
+		color: $white
+
+		&:hover
+			background-color: $lightMainColor
+			color: $mainColor
+
+		&:active
+			background-color: $lightMainColor
+			color: $mainColor
+
+	&.active
+		background-color: $white
+		color: $mainColor
+
+		&:hover
+			background-color: $lightMainColor
+			color: $mainColor
+
+		&:active
+			background-color: $lightMainColor
+			color: $mainColor
+
+	&:hover
+		background-color: $mainColor
+		color: $white
+
+		& svg
+			fill: $white
+
+	&:active
+		background-color: $activeMainColor
+		+transformScale
+
+	& svg
+		fill: $mainColor
+		margin-right: 10px
+
+		+transition
+
+.btn-regular
+	text-align: center
+	cursor: pointer
+	border: none
+	background-color: transparent
+	font-size: 17px
+	text-decoration: underline
+
+	color: $gray
+
+	+MontserratRegular
+	+transition
+
+	&:hover
+		color: $mainColor
+
+	&:active
+		+transformScale

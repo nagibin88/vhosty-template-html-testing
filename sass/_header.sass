@@ -1,0 +1,29 @@
+// header
+.header
+	padding: 25px 0
+	border-bottom: 2px solid $lightMainColor
+
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&-logo
+		display: block
+
+		&:active
+			+transformScale
+
+		&__image
+			+disabledEvents
+
+	&-nav
+		&__link
+			font-size: 16px
+			margin-right: 35px
+
+			&:last-child
+				margin-right: 0
+
+	&__menu
+		display: none

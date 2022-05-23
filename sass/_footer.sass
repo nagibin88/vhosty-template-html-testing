@@ -1,0 +1,43 @@
+// footer
+.footer
+	padding: 25px 0
+	border-top: 2px solid $lightMainColor
+
+	&-block
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		margin-bottom: 65px
+
+		&:last-child
+			margin-bottom: 0
+
+	&-logo
+		display: block
+
+		&:active
+			+transformScale
+
+		&__image
+			+disabledEvents
+
+	&-nav
+		&__link
+			font-size: 16px
+			margin-right: 35px
+
+			&:last-child
+				margin-right: 0
+
+	&-social
+		&__subtitle
+			color: $mainColor
+			margin-bottom: 10px
+
+		&-item
+			&__image
+				width: 25px
+
+	&__copyright
+		color: $mainColor

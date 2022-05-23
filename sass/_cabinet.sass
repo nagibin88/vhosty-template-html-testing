@@ -1,0 +1,409 @@
+// cabinet
+.cabinet
+	margin: 35px 0
+
+	&-message
+		padding: 25px 30px
+		color: $white
+
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		background: linear-gradient(89.65deg, #5D4DA0 5.49%, #2824A6 47.29%, #000673 77.15%), #101287
+
+		+borderRadiusBlock
+
+		&-text
+			display: flex
+			align-items: center
+
+			&-icon
+				margin-right: 35px
+				width: 25px
+
+			&-block
+				&__title
+					font-size: 20px
+					margin-bottom: 10px
+
+				&__subtitle
+					color: #C5C2E4
+
+		&__time
+			+MontserratBold
+
+		&-btn
+			display: flex
+
+			&__btn
+				&:first-child
+					margin-right: 10px
+
+	&-block
+		padding: 30px
+		background-color: $white
+
+		border: 1px solid #E3E4EF
+
+		+borderRadiusBlock
+
+		&__title
+			display: flex
+			align-items: center
+
+			font-size: 24px
+			color: $mainColor
+
+			& svg
+				cursor: pointer
+				margin-left: 10px
+
+				+transition
+
+				&:active
+					+transformScale
+
+		&__subtitle
+			margin-top: 10px
+			font-size: 18px
+
+		&-user
+			margin-top: 25px
+
+			position: relative
+			display: flex
+
+			&-avatar
+				margin-right: 50px
+
+				width: 300px
+				min-height: 100%
+
+				+backgroundSetting
+				+borderRadiusBlock
+
+			&-info
+				padding: 25px 0
+
+				&__name
+					margin-bottom: 10px
+					font-size: 28px
+					color: $mainColor
+
+				&__status
+					font-size: 21px
+
+				&-list
+					margin-top: 50px
+
+					&-item
+						display: flex
+						align-items: center
+
+						margin-bottom: 30px
+
+						&:last-child
+							margin-bottom: 0
+
+						&__key
+							width: 50%
+
+							color: $gray
+							font-size: 21px
+
+						&__value
+							width: 35%
+							display: flex
+							align-items: center
+
+							font-size: 21px
+
+							& svg
+								cursor: pointer
+
+								margin-left: 10px
+
+								+transition
+
+								&:active
+									+transformScale
+
+			&__btn
+				position: absolute
+				bottom: 30px
+				right: 45px
+
+		&-bar
+			margin-top: 25px
+
+			display: flex
+			justify-content: space-between
+
+			&-item
+				width: 28%
+
+				display: flex
+				align-items: flex-start
+
+				&__icon
+					border-radius: 10px
+
+					+disabledEvents
+
+				&-text
+					margin-left: 15px
+
+					&__title
+						font-size: 20px
+						color: $mainColor
+						margin-bottom: 5px
+
+					&__subtitle
+						font-size: 16px
+
+			&-arrow
+				margin-top: 10px
+
+		&-row
+			display: flex
+			justify-content: space-between
+
+			margin-top: 25px
+
+		&-edit-user
+			position: relative
+			width: 49%
+			padding-bottom: 65px
+
+			&-list
+				margin-top: 50px
+
+				&-item
+					display: flex
+					align-items: center
+
+					margin-bottom: 30px
+
+					&:last-child
+						margin-bottom: 0
+
+					&__key
+						width: 50%
+						white-space: nowrap
+
+						color: $gray
+						font-size: 21px
+
+					&__value
+						width: 40%
+						overflow: hidden
+						white-space: nowrap
+						text-overflow: ellipsis
+
+						font-size: 21px
+
+			&__btn
+				position: absolute
+				bottom: 30px
+				right: 45px
+
+		&-notifications
+			width: 49%
+
+			&-items-wrapper-wrapper
+				margin-top: 25px
+
+				overflow-y: auto
+				height: 325px
+
+				&::-webkit-scrollbar
+					width: 4px
+					height: 7px
+					background-color: #F0F0F0
+
+				&::-webkit-scrollbar-thumb
+					background-color: #E2E2E2
+					border-radius: 3px
+
+				&::-webkit-scrollbar-thumb:hover
+					background-color: #E2E2E2
+
+				&::-ms-scrollbar
+					width: 4px
+					height: 8px
+					background-color: #F0F0F0
+
+				&::-ms-scrollbar-thumb
+					background-color: #E2E2E2
+					border-radius: 3px
+
+				&::-ms-scrollbar-thumb:hover
+					background-color: #E2E2E2
+
+			&-items-wrapper
+				margin-right: 25px
+
+			&-item
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+				margin-bottom: 15px
+				padding-bottom: 15px
+
+				border-bottom: 1px solid $borderGray
+
+				&:last-child
+					margin: 0
+					padding: 0
+
+					border: none
+
+				&-content
+					display: flex
+					align-items: center
+
+					&-text
+						margin-left: 10px
+
+						&__title
+							overflow: hidden
+							white-space: nowrap
+							text-overflow: ellipsis
+
+							font-size: 17px
+							margin-bottom: 3px
+
+							+MontserratRegular
+
+						&__subtitle
+							overflow: hidden
+							white-space: nowrap
+							text-overflow: ellipsis
+
+							font-size: 14px
+							color: $gray
+
+				&__value
+					white-space: nowrap
+					text-overflow: ellipsis
+
+					color: $mainColor
+					+InterRegular
+					+transition
+
+					&.link
+						text-decoration: underline
+
+						&:hover
+							color: $activeMainColor
+
+						&:active
+							+transformScale
+
+		&-indicators
+			width: 49%
+
+			&-items-wrapper
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+				margin-top: 25px
+
+			&-item
+				width: calc( 100% / 4 - 15px )
+
+				padding: 30px 15px
+
+				text-align: center
+
+				display: inline-flex
+				flex-direction: column
+				align-items: center
+				justify-content: space-between
+
+				height: 350px
+
+				border: 1px solid $borderGray
+				border-radius: 100px
+
+				text-transform: uppercase
+
+				&.warning
+					color: $white
+					background-color: $red
+
+					box-shadow: 0px 50.1718px 77.6469px rgba(255, 66, 103, 0.14), 0px 32.5188px 45.4737px rgba(255, 66, 103, 0.106296), 0px 19.3254px 24.732px rgba(255, 66, 103, 0.085037), 0px 10.0344px 12.6176px rgba(255, 66, 103, 0.07), 0px 4.08807px 6.32678px rgba(255, 66, 103, 0.054963), 0px 0.929108px 3.05555px rgba(255, 66, 103, 0.0337037)
+
+				&-top
+					&__title
+						writing-mode: vertical-lr
+
+				&-bottom
+					&__icon
+						margin-bottom: 10px
+
+					&__number
+						font-size: 28px
+						margin-bottom: 5px
+
+					&__subtitle
+						font-size: 14px
+
+		&-statistics
+			width: 49%
+
+			&-items-wrapper
+				margin-top: 50px
+
+			&-item
+				display: flex
+				align-items: center
+
+				margin-bottom: 25px
+
+				&:last-child
+					margin-bottom: 0
+
+				&-progress
+					position: relative
+					display: flex
+					justify-content: center
+					align-items: center
+
+					&-spinner
+						border-radius: 50%
+						height: 90px
+						width: 90px
+
+					&-circle
+						position: absolute
+
+						display: flex
+						align-items: center
+						justify-content: center
+
+						height: 70px
+						width: 70px
+
+						border-radius: 50%
+						background-color: $white
+
+						font-size: 20px
+
+						+MontserratRegular
+
+				&-text
+					margin-left: 35px
+
+					&__title
+						font-size: 21px
+						margin-bottom: 10px
+
+						+MontserratRegular
+
+					&__subtitle
+						color: $gray
+						font-size: 16px
